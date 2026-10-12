@@ -192,6 +192,169 @@
   }
 }
 ```
+
+/* LUXURY GOLD PASSPORT DETAILS */
+.passport-cover {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #c7a45d;
+  outline: 1px solid #c7a45d;
+  outline-offset: -8px;
+  background:
+    radial-gradient(ellipse at 50% 45%, #762b3c 0%, transparent 60%),
+    linear-gradient(145deg, #651e30, #280b15 85%);
+}
+
+.passport-cover::before {
+  content: "✧  ✦  ✧";
+  position: absolute;
+  top: 12px;
+  left: 0;
+  right: 0;
+  color: #dfc17d;
+  font-size: 13px;
+  letter-spacing: 8px;
+  opacity: 0.8;
+}
+
+.passport-cover::after {
+  content: "✦";
+  position: absolute;
+  bottom: 42px;
+  right: 20px;
+  color: #d6b56d;
+  font-size: 24px;
+  opacity: 0.35;
+}
+
+.passport-emblem {
+  color: #f0d99d;
+  text-shadow: 0 0 12px #d4ad5c66;
+  border: 1px solid #c7a45d;
+  border-radius: 50%;
+  width: 76px;
+  height: 76px;
+  display: grid;
+  place-items: center;
+  box-shadow: inset 0 0 0 4px #c7a45d22;
+}
+
+.passport-title {
+  color: #e7cc8c;
+  text-shadow: 0 1px 1px #000;
+}
+
+.passport-names {
+  color: #fff0c9;
+  text-shadow: 0 2px 8px #0006;
+}
+
+.boarding-pass {
+  position: relative;
+  border: 1px solid #e2cfaa;
+  background:
+    radial-gradient(ellipse at top right, #fffaf0, transparent 55%),
+    #f6eedf;
+}
+
+.ticket-heading {
+  border-bottom: 1px solid #d6bd8d;
+  padding-bottom: 15px;
+}
+
+.ticket-route {
+  position: relative;
+}
+
+.route-symbol {
+  border: 1px solid #c6a466;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  transform: rotate(-8deg);
+}
+
+.ticket-divider {
+  border-top: 1px dashed #ad8a50;
+}
+
+.ticket-footer {
+  border-top: 1px dashed #ad8a50;
+}
+
+.ticket-barcode {
+  display: inline-block;
+  background: repeating-linear-gradient(
+    90deg,
+    #321923 0px,
+    #321923 2px,
+    transparent 2px,
+    transparent 4px,
+    #321923 4px,
+    #321923 5px,
+    transparent 5px,
+    transparent 8px
+  );
+  width: 92px;
+  height: 32px;
+  overflow: hidden;
+  font-size: 0;
+  letter-spacing: 0;
+}
+
+.travel-message {
+  text-shadow: 0 1px 12px #c7a45d33;
+}
+
+.passport-stamp {
+  position: absolute;
+  top: 88px;
+  right: 14px;
+  width: 96px;
+  height: 96px;
+  border: 1px solid #d7b76f;
+  outline: 1px dashed #d7b76f;
+  outline-offset: -5px;
+  border-radius: 50%;
+  transform: rotate(12deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: #e7cc8c;
+  font-size: 7px;
+  letter-spacing: 1px;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.passport-stamp strong {
+  font-family: 'Cinzel', serif;
+  font-size: 17px;
+  letter-spacing: 2px;
+}
+
+.passport-stamp .stamp-star {
+  font-size: 11px;
+}
+
+@media (max-width: 650px) {
+  .passport-stamp {
+    top: 72px;
+    right: 18px;
+    width: 78px;
+    height: 78px;
+  }
+
+  .passport-stamp strong {
+    font-size: 14px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -205,6 +368,13 @@
       <div class="passport-top">REPUBLIC OF LOVE</div>
 
       <div class="passport-emblem">✦</div>
+
+<div class="passport-stamp">
+  <span>DESTINATION</span>
+  <strong>CEBU</strong>
+  <span>PHILIPPINES · 2027</span>
+  <span class="stamp-star">✦</span>
+</div>
 
       <div class="passport-title">PASSPORT</div>
       <div class="passport-subtitle">A JOURNEY TO FOREVER</div>
