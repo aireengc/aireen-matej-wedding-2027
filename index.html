@@ -567,6 +567,125 @@ css
   color: #f0d18a !important;
 }
 
+/* WEDDING DETAILS PASSPORT CARDS */
+.wedding-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 900px;
+  margin: 38px auto 0;
+  text-align: center;
+}
+
+.wedding-detail-card {
+  position: relative;
+  overflow: hidden;
+  padding: 30px 24px;
+  border: 1px solid #c7a45d;
+  outline: 1px solid #c7a45d;
+  outline-offset: -7px;
+  background:
+    radial-gradient(ellipse at top, #54202d66, transparent 70%),
+    linear-gradient(145deg, #211117, #100b0e);
+}
+
+.reception-card {
+  background:
+    radial-gradient(ellipse at top, #d8b66b12, transparent 70%),
+    linear-gradient(145deg, #211a17, #100b0e);
+}
+
+.detail-stamp {
+  display: inline-block;
+  border: 1px dashed #d8b66b;
+  padding: 8px 12px;
+  color: #d8b66b;
+  font: 10px Cinzel, serif;
+  letter-spacing: 1.5px;
+}
+
+.detail-icon {
+  margin: 22px 0 10px;
+  color: #d8b66b;
+  font-size: 32px;
+}
+
+.wedding-detail-card h3 {
+  margin: 8px 0;
+  color: #f8f0df;
+  font: 500 23px Cinzel, serif;
+}
+
+.detail-rule {
+  width: 70px;
+  margin: 16px auto;
+  border-top: 1px solid #d8b66b;
+}
+
+.detail-venue {
+  color: #e5c783;
+  font-size: 24px;
+  margin: 10px 0 4px;
+}
+
+.wedding-detail-card > p:not(.detail-venue) {
+  color: #d9cdbb;
+}
+
+.detail-info {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+  padding: 18px 0;
+  border-top: 1px dashed #9c7536;
+  border-bottom: 1px dashed #9c7536;
+}
+
+.detail-info div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-info span {
+  color: #d8b66b;
+  font: 10px Cinzel, serif;
+  letter-spacing: 1.5px;
+}
+
+.detail-info strong {
+  color: #f8f0df;
+  font: 12px Cinzel, serif;
+}
+
+.wedding-detail-card .detail-note {
+  margin: 18px 0 0;
+  font-size: 15px;
+  font-style: italic;
+}
+
+.details-signoff {
+  color: #d8b66b;
+  font-size: 32px;
+  margin: 38px 0 0;
+}
+
+@media (max-width: 650px) {
+  .wedding-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .wedding-detail-card {
+    padding: 28px 20px;
+  }
+
+  .details-signoff {
+    font-size: 27px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -742,7 +861,61 @@ css
   </div>
 </section>
 
-<section class="section alt center" id="details"><div class="wrap"><div class="kicker">Save the date</div><h2 class="script">Wedding Details</h2><p class="intro">Please join us as we say “I do” beside the sea and celebrate the journey ahead.</p><div class="grid"><article class="card"><div class="kicker">The Ceremony</div><h3>Turtle Garden</h3><p>JPark Island Resort &amp; Waterpark</p><p>Cebu, Philippines</p><p>May 20, 2027 · 3:30 PM Philippine Time</p></article><article class="card"><div class="kicker">The Reception</div><h3>Marcela Pavilion</h3><p>JPark Island Resort &amp; Waterpark</p><p>Cebu, Philippines</p><p>Reception to follow the ceremony</p></article></div><div class="kicker" style="margin-top:48px">The countdown begins</div><div class="countdown" aria-label="Countdown to the wedding"><div class="time"><strong id="days">—</strong><span>Days</span></div><div class="time"><strong id="hours">—</strong><span>Hours</span></div><div class="time"><strong id="minutes">—</strong><span>Minutes</span></div><div class="time"><strong id="seconds">—</strong><span>Seconds</span></div></div><p class="small">Counting down to May 20, 2027 at 3:30 PM in the Philippines (UTC+8).</p></div></section>
+
+<section class="section alt center" id="details">
+  <div class="wrap">
+    <div class="kicker">Passport Stamp 01 &amp; 02 · Cebu, Philippines</div>
+    <h2 class="script">Wedding Details</h2>
+    <p class="intro">
+      Two special stops, one unforgettable day. We can't wait to celebrate with you!
+    </p>
+
+    <div class="wedding-detail-grid">
+      <article class="wedding-detail-card ceremony-card">
+        <div class="detail-stamp">01 · THE CEREMONY</div>
+        <div class="detail-icon">✦</div>
+        <h3>The Ceremony</h3>
+        <div class="detail-rule"></div>
+        <p class="detail-venue">Turtle Garden</p>
+        <p>JPark Island Resort &amp; Waterpark</p>
+        <div class="detail-info">
+          <div>
+            <span>DATE</span>
+            <strong>20 MAY 2027</strong>
+          </div>
+          <div>
+            <span>TIME</span>
+            <strong>3:30 PM</strong>
+          </div>
+        </div>
+        <p class="detail-note">Philippine time · Please arrive a little early.</p>
+      </article>
+
+      <article class="wedding-detail-card reception-card">
+        <div class="detail-stamp">02 · THE CELEBRATION</div>
+        <div class="detail-icon">✧</div>
+        <h3>The Reception</h3>
+        <div class="detail-rule"></div>
+        <p class="detail-venue">Marcela Pavilion</p>
+        <p>JPark Island Resort &amp; Waterpark</p>
+        <div class="detail-info">
+          <div>
+            <span>DATE</span>
+            <strong>20 MAY 2027</strong>
+          </div>
+          <div>
+            <span>DESTINATION</span>
+            <strong>CEBU, PHILIPPINES</strong>
+          </div>
+        </div>
+        <p class="detail-note">Join us for food, laughter, and celebration.</p>
+      </article>
+    </div>
+
+    <p class="details-signoff script">We saved you a seat on our journey.</p>
+  </div>
+</section>
+
 <section class="section center" id="dress"><div class="wrap"><div class="kicker">Dress to celebrate</div><h2 class="script">The Dress Code</h2><p class="intro">Our celebration palette is red, black and gold, with an elegant formal-beach feel.</p><div class="grid"><article class="card dress"><div class="kicker">For the ladies</div><h3>Formal Beach · Women</h3><div class="swatches"><span class="swatch" style="background:#7c172b"></span><span class="swatch" style="background:#c9a34e"></span><span class="swatch" style="background:#f3e7ce"></span></div><p>Elegant dresses in red and gold. Choose flowing fabrics and beach-friendly formal shoes.</p></article><article class="card dress"><div class="kicker">For the gentlemen</div><h3>Formal Beach · Men</h3><div class="swatches"><span class="swatch" style="background:#100e10"></span><span class="swatch" style="background:#7c172b"></span><span class="swatch" style="background:#c9a34e"></span></div><p>Formal beach attire in black, red and gold. Lightweight suits or tailored shirts and trousers are welcome.</p></article></div><p class="small">Photo examples can be added later; this design intentionally avoids empty or broken image placeholders.</p></div></section>
 <section class="section alt center" id="travel"><div class="wrap"><div class="kicker">Your journey to Cebu</div><h2 class="script">Travel Notes</h2><p class="intro">Our ceremony and reception will both take place at JPark Island Resort &amp; Waterpark in Mactan, Cebu, Philippines.</p><div class="note"><p><strong>Destination:</strong> JPark Island Resort &amp; Waterpark, Mactan, Cebu</p><p><strong>Arrival:</strong> Please allow enough time for airport transfers and resort check-in before the ceremony.</p><p><strong>Accommodation:</strong> Check the resort directly for room availability and booking details.</p></div><p class="small">More travel and accommodation information will be shared as it is confirmed.</p></div></section>
 
