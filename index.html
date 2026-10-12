@@ -369,6 +369,149 @@ css
   ) !important;
 }
 
+/* OUR JOURNEY PASSPORT TIMELINE */
+.journey-passport {
+  max-width: 800px;
+}
+
+.journey-tagline {
+  color: var(--gold);
+  font-style: italic;
+  font-size: 22px;
+}
+
+.journey-route {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin: 32px auto 42px;
+  color: var(--gold);
+  font: 10px Cinzel, serif;
+  letter-spacing: 2px;
+}
+
+.journey-plane {
+  font-size: 25px;
+  border-bottom: 1px dashed var(--gold);
+  padding: 0 18px 8px;
+}
+
+.journey-timeline {
+  position: relative;
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.journey-timeline::before {
+  content: "";
+  position: absolute;
+  left: 26px;
+  top: 25px;
+  bottom: 30px;
+  border-left: 1px dashed var(--gold);
+  opacity: .65;
+}
+
+.journey-stop {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  padding: 0 0 36px;
+}
+
+.journey-stamp {
+  flex: 0 0 54px;
+  height: 54px;
+  border: 1px solid var(--gold);
+  outline: 1px dashed var(--gold);
+  outline-offset: -5px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #100b0e;
+  color: var(--gold);
+  font: 16px Cinzel, serif;
+  z-index: 1;
+}
+
+.journey-copy {
+  flex: 1;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 20px 22px;
+  background: linear-gradient(135deg, #ffffff08, #00000018);
+}
+
+.journey-copy h3 {
+  margin: 5px 0 10px;
+  color: var(--cream);
+  font: 500 20px Cinzel, serif;
+}
+
+.journey-copy p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.journey-signoff {
+  color: var(--gold);
+  font-size: 48px;
+  margin-top: 12px;
+}
+
+.journey-footer {
+  color: var(--gold);
+  font: 10px Cinzel, serif;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 650px) {
+  .journey-route {
+    gap: 8px;
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .journey-plane {
+    padding: 0 8px 6px;
+  }
+
+  .journey-stop {
+    gap: 13px;
+    padding-bottom: 24px;
+  }
+
+  .journey-stamp {
+    flex-basis: 44px;
+    height: 44px;
+    font-size: 13px;
+  }
+
+  .journey-timeline::before {
+    left: 21px;
+  }
+
+  .journey-copy {
+    padding: 15px;
+  }
+
+  .journey-copy h3 {
+    font-size: 16px;
+  }
+
+  .journey-copy .kicker {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .journey-signoff {
+    font-size: 40px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -460,8 +603,90 @@ css
 
   <a class="button" href="#details">Explore Our Invitation</a>
 </section>
-```
-<section class="section center" id="journey"><div class="wrap"><div class="kicker">A little bit of magic</div><h2 class="script">Our Journey</h2><p class="intro">Some journeys take us across oceans; the most beautiful ones lead us to each other. With grateful hearts, we invite you to celebrate the beginning of our forever.</p><div class="rule"></div><p class="intro">From two different places to one shared home, our story keeps unfolding. We cannot wait to make this day a cherished chapter with the people we love.</p></div></section>
+
+<section class="section center alt" id="journey">
+  <div class="wrap journey-passport">
+
+    <div class="kicker">Passport of Love · A &amp; M</div>
+    <h2 class="script">Our Journey</h2>
+    <p class="journey-tagline">
+      Two countries. Two hearts. One destination.
+    </p>
+
+    <div class="journey-route">
+      <span>PHILIPPINES</span>
+      <span class="journey-plane">✈</span>
+      <span>SWITZERLAND</span>
+    </div>
+
+    <div class="journey-timeline">
+
+      <article class="journey-stop">
+        <div class="journey-stamp">01</div>
+        <div class="journey-copy">
+          <div class="kicker">First stamp · Our beginning</div>
+          <h3>Two Countries, One Connection</h3>
+          <p>
+            Our love story began across the miles. Different countries,
+            different time zones, and plenty of distance—but somehow,
+            our hearts found the same destination.
+          </p>
+        </div>
+      </article>
+
+      <article class="journey-stop">
+        <div class="journey-stamp">02</div>
+        <div class="journey-copy">
+          <div class="kicker">Second stamp · Love has no time zone</div>
+          <h3>Closer With Every Message</h3>
+          <p>
+            Calls, messages, smiles through a screen, and little moments
+            that made the distance feel smaller. We learned that love
+            isn't measured in kilometres, but in the effort we make
+            for each other.
+          </p>
+        </div>
+      </article>
+
+      <article class="journey-stop">
+        <div class="journey-stamp">03</div>
+        <div class="journey-copy">
+          <div class="kicker">Third stamp · A life together</div>
+          <h3>From Long Distance to One Life</h3>
+          <p>
+            What started across borders became a shared life. New
+            adventures, new routines, and a love that keeps growing—
+            one beautiful chapter at a time.
+          </p>
+        </div>
+      </article>
+
+      <article class="journey-stop final-stop">
+        <div class="journey-stamp">∞</div>
+        <div class="journey-copy">
+          <div class="kicker">Final destination · May 20, 2027</div>
+          <h3>Our Forever Journey</h3>
+          <p>
+            Our next adventure is only beginning! We'll celebrate
+            our love with our favourite people in Cebu. One marriage,
+            countless adventures, and a lifetime of memories still
+            waiting to be made.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="journey-signoff script">
+      Aireen &amp; Matej
+    </div>
+    <p class="journey-footer">
+      ADMITTED TO OUR FOREVER · CEBU, PHILIPPINES
+    </p>
+
+  </div>
+</section>
+
 <section class="section alt center" id="details"><div class="wrap"><div class="kicker">Save the date</div><h2 class="script">Wedding Details</h2><p class="intro">Please join us as we say “I do” beside the sea and celebrate the journey ahead.</p><div class="grid"><article class="card"><div class="kicker">The Ceremony</div><h3>Turtle Garden</h3><p>JPark Island Resort &amp; Waterpark</p><p>Cebu, Philippines</p><p>May 20, 2027 · 3:30 PM Philippine Time</p></article><article class="card"><div class="kicker">The Reception</div><h3>Marcela Pavilion</h3><p>JPark Island Resort &amp; Waterpark</p><p>Cebu, Philippines</p><p>Reception to follow the ceremony</p></article></div><div class="kicker" style="margin-top:48px">The countdown begins</div><div class="countdown" aria-label="Countdown to the wedding"><div class="time"><strong id="days">—</strong><span>Days</span></div><div class="time"><strong id="hours">—</strong><span>Hours</span></div><div class="time"><strong id="minutes">—</strong><span>Minutes</span></div><div class="time"><strong id="seconds">—</strong><span>Seconds</span></div></div><p class="small">Counting down to May 20, 2027 at 3:30 PM in the Philippines (UTC+8).</p></div></section>
 <section class="section center" id="dress"><div class="wrap"><div class="kicker">Dress to celebrate</div><h2 class="script">The Dress Code</h2><p class="intro">Our celebration palette is red, black and gold, with an elegant formal-beach feel.</p><div class="grid"><article class="card dress"><div class="kicker">For the ladies</div><h3>Formal Beach · Women</h3><div class="swatches"><span class="swatch" style="background:#7c172b"></span><span class="swatch" style="background:#c9a34e"></span><span class="swatch" style="background:#f3e7ce"></span></div><p>Elegant dresses in red and gold. Choose flowing fabrics and beach-friendly formal shoes.</p></article><article class="card dress"><div class="kicker">For the gentlemen</div><h3>Formal Beach · Men</h3><div class="swatches"><span class="swatch" style="background:#100e10"></span><span class="swatch" style="background:#7c172b"></span><span class="swatch" style="background:#c9a34e"></span></div><p>Formal beach attire in black, red and gold. Lightweight suits or tailored shirts and trousers are welcome.</p></article></div><p class="small">Photo examples can be added later; this design intentionally avoids empty or broken image placeholders.</p></div></section>
 <section class="section alt center" id="travel"><div class="wrap"><div class="kicker">Your journey to Cebu</div><h2 class="script">Travel Notes</h2><p class="intro">Our ceremony and reception will both take place at JPark Island Resort &amp; Waterpark in Mactan, Cebu, Philippines.</p><div class="note"><p><strong>Destination:</strong> JPark Island Resort &amp; Waterpark, Mactan, Cebu</p><p><strong>Arrival:</strong> Please allow enough time for airport transfers and resort check-in before the ceremony.</p><p><strong>Accommodation:</strong> Check the resort directly for room availability and booking details.</p></div><p class="small">More travel and accommodation information will be shared as it is confirmed.</p></div></section>
