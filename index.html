@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -773,6 +774,24 @@ body::before {
 </style>
 </head>
 <body>
+  
+<!-- VIDEO WELCOME LANDING -->
+<div id="video-landing" style="position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;background:linear-gradient(rgba(12,5,9,.55),rgba(12,5,9,.88)),url('castle-background.png') center/cover no-repeat;">
+  <div style="width:min(900px,100%);padding:clamp(24px,5vw,52px);border:1px solid #d8b66b;background:rgba(18,8,13,.85);">
+    <p style="font:11px Cinzel,serif;letter-spacing:.2em;color:#d8b66b;">A FAIRYTALE INVITATION</p>
+    <h1 style="font:clamp(42px,8vw,78px)/1.1 'Pinyon Script',cursive;color:#d8b66b;margin:20px 0;">Aireen &amp; Matej</h1>
+    <p style="font:12px Cinzel,serif;color:#f8f0df;">MAY 20, 2027 · CEBU, PHILIPPINES</p>
+    <p style="color:#f8f0df;">Our journey to forever begins here.</p>
+    <button id="video-play" type="button" style="cursor:pointer;background:linear-gradient(135deg,#e8cc84,#b88a3b);color:#1b0d12;border:1px solid #f4dda1;padding:15px 24px;margin-top:24px;font:12px Cinzel,serif;letter-spacing:.1em;">▶ PLAY OUR WEDDING INVITATION</button>
+    <video id="invitation-video" controls playsinline preload="metadata" style="display:none;width:100%;max-height:65vh;background:#000;margin-top:22px;">
+      <source src="wedding-invitation.mp4" type="video/mp4">
+      Your browser does not support video playback.
+    </video>
+    <p><button id="video-continue" type="button" style="display:none;cursor:pointer;background:linear-gradient(135deg,#e8cc84,#b88a3b);color:#1b0d12;border:1px solid #f4dda1;padding:15px 24px;margin-top:20px;font:12px Cinzel,serif;">OPEN OUR WEDDING INVITATION →</button></p>
+  </div>
+</div>
+<!-- END VIDEO WELCOME LANDING -->
+
 <header class="topbar"><nav aria-label="Main navigation"><a class="brand" href="#home">A &amp; M · 20 MAY 2027</a><div class="navlinks"><a href="#journey">OUR JOURNEY</a><a href="#details">WEDDING DETAILS</a><a href="#dress">DRESS CODE</a><a href="#travel">TRAVEL</a><a href="#rsvp">RSVP</a></div></nav></header>
 <main>
 
@@ -1057,3 +1076,36 @@ body::before {
 </main><footer><div class="script">Aireen &amp; Matej</div><div>May 20, 2027 · Cebu, Philippines</div><div class="small">With love, today and always.</div></footer>
 <script>(function(){const target=new Date("2027-05-20T15:30:00+08:00").getTime();const ids=["days","hours","minutes","seconds"];function update(){const r=Math.max(0,target-Date.now());const v=[Math.floor(r/86400000),Math.floor(r%86400000/3600000),Math.floor(r%3600000/60000),Math.floor(r%60000/1000)];ids.forEach((id,i)=>{const e=document.getElementById(id);if(e)e.textContent=String(v[i]).padStart(2,"0")})}update();setInterval(update,1000)})();</script>
 </body></html>
+
+
+<script>
+(function () {
+  const landing = document.getElementById('video-landing');
+  const playButton = document.getElementById('video-play');
+  const video = document.getElementById('invitation-video');
+  const continueButton = document.getElementById('video-continue');
+
+  if (!landing || !playButton || !video || !continueButton) return;
+
+  document.body.style.overflow = 'hidden';
+
+  playButton.addEventListener('click', function () {
+    playButton.style.display = 'none';
+    video.style.display = 'block';
+    video.play().catch(function () {
+      video.controls = true;
+    });
+  });
+
+  video.addEventListener('ended', function () {
+    continueButton.style.display = 'inline-block';
+  });
+
+  continueButton.addEventListener('click', function () {
+    landing.style.display = 'none';
+    document.body.style.overflow = '';
+    document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+  });
+})();
+</script>
+
