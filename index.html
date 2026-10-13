@@ -737,6 +737,39 @@ a.button[href*="docs.google.com/forms"]:hover {
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
 }
 
+/* FAIRY-TALE CASTLE BACKGROUND */
+body {
+  background: #211017 url("castle-background.png")
+    center center / cover fixed no-repeat !important;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(25, 8, 15, 0.25),
+    rgba(25, 8, 15, 0.48)
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Let the castle show through the website sections */
+.section,
+.section.alt {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Keep the wedding text readable */
+.card,
+.wedding-detail-card {
+  background-color: rgba(255, 248, 235, 0.94);
+  color: #29151a;
+}
+
 </style>
 </head>
 <body>
