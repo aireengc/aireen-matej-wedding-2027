@@ -277,13 +277,23 @@ a.button[href*="docs.google.com/forms"]:hover {
   text-shadow: 0 2px 8px #0006;
 }
 
+
 .boarding-pass {
   position: relative;
-  border: 1px solid #e2cfaa;
+  border: 1px solid #d6b77a;
   background:
+    linear-gradient(90deg, transparent 0, transparent 14px, rgba(139, 100, 50, 0.08) 14px, rgba(139, 100, 50, 0.08) 15px, transparent 15px),
     radial-gradient(ellipse at top right, #fffaf0, transparent 55%),
     #f6eedf;
+  color: #321923;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  box-sizing: border-box;
 }
+
 
 .ticket-heading {
   border-bottom: 1px solid #d6bd8d;
