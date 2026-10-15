@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#180d12"><meta name="description" content="Aireen & Matej wedding invitation, May 20, 2027, Cebu, Philippines.">
-<title>Aireen &amp; Matej — Destination Forever</title>
+<title id="page-title">Aireen &amp; Matej — Destination Forever</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
 
@@ -771,9 +771,44 @@ body::before {
   color: #29151a;
 }
 
-</style>
+
+.language-switch {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #d8b66b;
+  font-family: Cinzel, serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.language-switch button {
+  background: transparent;
+  border: 1px solid transparent;
+  color: #f8f0df;
+  padding: 8px 10px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.language-switch button:hover,
+.language-switch button.active {
+  color: #d8b66b;
+  border-color: #d8b66b;
+}
+
+  </style>
 </head>
 <body>
+  <div class="language-switch" aria-label="Choose language">
+  <button type="button" id="lang-en" onclick="setLanguage('en')">EN</button>
+  <span>|</span>
+  <button type="button" id="lang-sk" onclick="setLanguage('sk')">SK</button>
+</div>
   
 <!-- VIDEO WELCOME LANDING -->
 <div id="video-landing" style="position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;background:linear-gradient(rgba(12,5,9,.55),rgba(12,5,9,.88)),url('castle-background.png') center/cover no-repeat;">
@@ -792,7 +827,7 @@ body::before {
 </div>
 <!-- END VIDEO WELCOME LANDING -->
 
-<header class="topbar"><nav aria-label="Main navigation"><a class="brand" href="#home">A &amp; M · 20 MAY 2027</a><div class="navlinks"><a href="#journey">OUR JOURNEY</a><a href="#details">WEDDING DETAILS</a><a href="#dress">DRESS CODE</a><a href="#travel">TRAVEL</a><a href="#rsvp">RSVP</a></div></nav></header>
+<header class="topbar"><nav aria-label="Main navigation"><a class="brand" href="#home">A &amp; M · 20 MAY 2027</a><div class="navlinks"><a href="#journey"><span data-en="OUR JOURNEY" data-sk="NÁŠ PRÍBEH">OUR JOURNEY</span></a><a href="#details"><span data-en="WEDDING DETAILS" data-sk="INFORMÁCIE O SVADBE">WEDDING DETAILS</span></a><a href="#dress"><span data-en="DRESS CODE" data-sk="SLÁVNOSTNÉ OBLEČENIE">DRESS CODE</span></a><a href="#travel"><span data-en="TRAVEL" data-sk="CESTOVANIE">TRAVEL</span></a><a href="#rsvp"><span data-en="RSVP" data-sk="POTVRDENIE ÚČASTI">RSVP</span></a></div></nav></header>
 <main>
 
 <section class="hero travel-hero" id="home">
@@ -878,14 +913,17 @@ body::before {
     Two hearts. One destination. Forever.
   </p>
 
-  <a class="button" href="#journey">Explore Our Invitation</a>
+  <a class="button" href="#journey"><span data-en="Explore Our Invitation"
+      data-sk="Preskúmať naše oznámenie">Explore Our Invitation</span></a>
 </section>
 
 <section class="section center alt" id="journey">
   <div class="wrap journey-passport">
 
     <div class="kicker">Passport of Love · A &amp; M</div>
-    <h2 class="script">Our Journey</h2>
+    <h2 class="script">
+  <span data-en="Our Journey" data-sk="Náš príbeh">Our Journey</span>
+</h2>
     <p class="journey-tagline">
       Two countries. Two hearts. One destination.
     </p>
@@ -989,7 +1027,7 @@ body::before {
 <section class="section alt center" id="details">
   <div class="wrap">
     <div class="kicker">Passport Stamp 01 &amp; 02 · Cebu, Philippines</div>
-    <h2 class="script">Wedding Details</h2>
+    <h2><span data-en="Wedding Details" data-sk="Informácie o svadbe">Wedding Details</span></h2>
     <p class="intro">
       Two special stops, one unforgettable day. We can't wait to celebrate with you!
     </p>
@@ -1068,7 +1106,7 @@ body::before {
   </div>
 </section>
 
-<section class="section center" id="dress"><div class="wrap"><div class="kicker">Dress to celebrate</div><h2 class="script">The Dress Code</h2>
+<section class="section center" id="dress"><div class="wrap"><div class="kicker">Dress to celebrate</div><h2 class="script"><span data-en="The Dress Code" data-sk="Slávnostné oblečenie">The Dress Code</span></h2>
   
 <img class="dress-code-image" src="dress-code.jpg" alt="Formal beach wedding dress code in red, black and gold" loading="lazy">
 <p class="intro">Our celebration palette is red, black and gold, with an elegant formal-beach feel.</p><div class="grid"><article class="card dress"><div class="kicker">For the ladies</div><h3>Formal Beach · Women</h3><div class="swatches"><span class="swatch" style="background:#7c172b"></span><span class="swatch" style="background:#c9a34e"></span></div><p>Elegant dresses in red and gold. Choose flowing fabrics and beach-friendly formal shoes.</p></article><article class="card dress"><div class="kicker">For the gentlemen</div><h3>Formal Beach · Men</h3><div class="swatches"><span class="swatch" style="background:#100e10"></span><span class="swatch" style="background:#7c172b"></span><span class="swatch" style="background:#c9a34e"></span></div><p>Formal beach attire in black, red and gold. Lightweight suits or tailored shirts and trousers are welcome.</p></article></div><p class="small"></p></div></section>
@@ -1098,7 +1136,32 @@ body::before {
 
 </main><footer><div class="script">Aireen &amp; Matej</div><div>May 20, 2027 · Cebu, Philippines</div><div class="small">With love, today and always.</div></footer>
 <script>(function(){const target=new Date("2027-05-20T15:30:00+08:00").getTime();const ids=["days","hours","minutes","seconds"];function update(){const r=Math.max(0,target-Date.now());const v=[Math.floor(r/86400000),Math.floor(r%86400000/3600000),Math.floor(r%3600000/60000),Math.floor(r%60000/1000)];ids.forEach((id,i)=>{const e=document.getElementById(id);if(e)e.textContent=String(v[i]).padStart(2,"0")})}update();setInterval(update,1000)})();</script>
-</body></html>
+
+<script>
+function setLanguage(lang) {
+  document.documentElement.lang = lang;
+
+  document.querySelectorAll('[data-en][data-sk]').forEach(function (element) {
+    element.textContent = element.getAttribute('data-' + lang);
+  });
+
+  document.querySelectorAll('.language-switch button').forEach(function (button) {
+    button.classList.toggle('active', button.id === 'lang-' + lang);
+  });
+
+  var title = document.getElementById('page-title');
+  if (title) {
+    title.textContent = lang === 'sk'
+      ? 'Aireen & Matej — Svadobné oznámenie'
+      : 'Aireen & Matej — Destination Forever';
+  }
+}
+</script>
+  <script>
+  setLanguage('en');
+</script>
+
+
 
 
 <script>
@@ -1131,4 +1194,7 @@ body::before {
   });
 })();
 </script>
+</body>
+</html>
+  
 
