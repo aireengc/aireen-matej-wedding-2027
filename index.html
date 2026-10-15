@@ -1209,11 +1209,14 @@ body::before {
 function setLanguage(lang) {
   document.documentElement.lang = lang;
 
-  document.querySelectorAll('[data-en][data-sk]').forEach(function (element) {
-    element.textContent = element.getAttribute('data-' + lang);
+  document.querySelectorAll('[data-en][data-sk]').forEach(function(element) {
+    var translation = element.getAttribute('data-' + lang);
+    if (translation !== null) {
+      element.innerHTML = translation;
+    }
   });
 
-  document.querySelectorAll('.language-switch button').forEach(function (button) {
+  document.querySelectorAll('.language-switch button').forEach(function(button) {
     button.classList.toggle('active', button.id === 'lang-' + lang);
   });
 
