@@ -809,14 +809,27 @@ body::before {
 
       /* Your existing CSS above */
 
-  /* Make RSVP instructions easier to read */
-  #rsvp p,
-  #rsvp .small {
-    color: #f8f0df !important;
-    opacity: 1 !important;
-    font-size: 18px;
-    line-height: 1.7;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+  ```css
+/* Make RSVP instructions easier to read */
+#rsvp p,
+#rsvp .small {
+  color: #5a2632 !important;
+  opacity: 1 !important;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.7;
+  text-shadow: none;
+}
+
+#rsvp .small {
+  font-size: 16px;
+  margin-top: 12px;
+}
+
+#rsvp p span {
+  color: inherit;
+}
+```
   }
 
   #rsvp .small {
