@@ -1252,7 +1252,8 @@ function setLanguage(lang) {
   });
 
   video.addEventListener('ended', function () {
-    continueButton.style.display = 'inline-block';
+   document.getElementById('video-continue-wrap').style.display = 'flex';
+continueButton.style.display = 'block';
   });
 
   continueButton.addEventListener('click', function () {
