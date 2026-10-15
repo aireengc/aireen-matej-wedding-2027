@@ -807,7 +807,28 @@ body::before {
   opacity: 1 !important;
 }
 
-  </style>
+      /* Your existing CSS above */
+
+  /* Make RSVP instructions easier to read */
+  #rsvp p,
+  #rsvp .small {
+    color: #f8f0df !important;
+    opacity: 1 !important;
+    font-size: 18px;
+    line-height: 1.7;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+  }
+
+  #rsvp .small {
+    font-size: 16px;
+    margin-top: 12px;
+  }
+
+  #rsvp p span {
+    color: inherit;
+  }
+
+</style>
 </head>
 <body>
   <div class="language-switch" aria-label="Choose language">
@@ -1149,8 +1170,14 @@ body::before {
   <p>With love,<br><strong>Aireen &amp; Matej</strong> ❤️</p>
 </div>
 
-  <p>Kindly let us know if you can join us by submitting your RSVP.</p>
-  <p class="small">Please respond using our online RSVP form.</p>
+  <p>
+<p><span data-en="Kindly let us know if you can join us by submitting your RSVP."
+         data-sk="Dajte nám, prosím, vedieť, či sa k nám pridáte, vyplnením potvrdenia účasti.">Kindly let us know if you can join us by submitting your RSVP.</span></p>
+</p>
+  <p class="small">
+<p class="small"><span data-en="Please respond using our online RSVP form."
+                        data-sk="Svoju účasť, prosím, potvrďte prostredníctvom nášho online formulára.">Please respond using our online RSVP form.</span></p>
+</p>
   <a class=
 <a class="button"
    href="https://script.google.com/macros/s/AKfycbxctoKrGPU0DzrH-ViyMgvXJBoheY8PNkbL5y1woZP79EmcBCQfwTVKHFatmCtCwCWXRA/exec"
