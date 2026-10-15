@@ -1252,9 +1252,18 @@ function setLanguage(lang) {
   });
 
   video.addEventListener('ended', function () {
-   document.getElementById('video-continue-wrap').style.display = 'flex';
-continueButton.style.display = 'block';
-  });
+  const wrap = document.getElementById('video-continue-wrap');
+  const videoRect = video.getBoundingClientRect();
+
+  wrap.style.position = 'fixed';
+  wrap.style.inset = 'auto';
+  wrap.style.left = (videoRect.left + videoRect.width / 2) + 'px';
+  wrap.style.top = (videoRect.top + videoRect.height / 2) + 'px';
+  wrap.style.transform = 'translate(-50%, -50%)';
+  wrap.style.display = 'flex';
+
+  continueButton.style.display = 'block';
+});
 
   continueButton.addEventListener('click', function () {
     landing.style.display = 'none';
