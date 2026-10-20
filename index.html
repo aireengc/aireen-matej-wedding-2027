@@ -840,7 +840,77 @@ body::before {
   #rsvp p span {
     color: inherit;
   }
-
+/* Gift from the Heart */
+.gift-section {
+  background: #f8f0df;
+  color: #641b2b;
+  border: 1px solid #bd8a3b;
+  border-radius: 8px;
+  padding: clamp(24px, 5vw, 60px);
+  margin: 40px auto;
+  max-width: 1100px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.12);
+}
+.gift-section .gift-intro {
+  max-width: 820px;
+  margin: 0 auto 30px;
+  text-align: center;
+  line-height: 1.7;
+}
+.gift-section h2 {
+  color: #641b2b;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  margin: 12px 0 24px;
+}
+.gift-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+.gift-card {
+  min-width: 0;
+  border: 1px solid #bd8a3b;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.gift-card h3 {
+  margin: 0;
+  color: #641b2b;
+}
+.gift-card p {
+  margin: 0;
+  line-height: 1.5;
+}
+.gift-qr {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+}
+.gift-signoff {
+  text-align: center;
+  font-style: italic;
+  margin: 28px 0;
+}
+@media (max-width: 650px) {
+  .gift-grid {
+    grid-template-columns: 1fr;
+  }
+  .gift-card {
+    padding: 20px;
+  }
+  .gift-qr {
+    max-width: 240px;
+  }
+}
 </style>
 </head>
 <body>
@@ -1164,6 +1234,75 @@ body::before {
 <span data-en="Our ceremony and reception will take place at JPark Island Resort &amp; Waterpark in Cebu, Philippines."
       data-sk="Náš svadobný obrad a hostina sa uskutočnia v rezorte JPark Island Resort &amp; Waterpark v Cebu na Filipínach.">Our ceremony and reception will take place at JPark Island Resort &amp; Waterpark in Cebu, Philippines.</span>
 </p><div class="note"><p><strong><span data-en="Destination:" data-sk="Destinácia:">Destination:</span></strong> <span data-en="JPark Island Resort &amp; Waterpark, Mactan, Cebu" data-sk="JPark Island Resort &amp; Waterpark, Mactan, Cebu">JPark Island Resort &amp; Waterpark, Mactan, Cebu</span></p><p><strong><span data-en="Arrival:" data-sk="Príchod:">Arrival:</span></strong> <span data-en="Please allow enough time for airport transfers and resort check-in before the ceremony." data-sk="Vyhraďte si dostatok času na transfer z letiska a ubytovanie v rezorte pred obradom.">Please allow enough time for airport transfers and resort check-in before the ceremony.</span></p><p><strong><span data-en="Accommodation:" data-sk="Ubytovanie:">Accommodation:</span></strong> <span data-en="Check the resort directly for room availability and booking details." data-sk="Informácie o dostupnosti izieb a rezerváciách si overte priamo v rezorte.">Check the resort directly for room availability and booking details.</span></p></div><p class="small"></p></div></section>
+
+<section class="gift-section" id="gifts">
+  <div class="gift-intro">
+    <p style="font:11px Cinzel,serif;letter-spacing:.2em;color:#925c24;">
+      <span data-en="A LITTLE LOVE FOR OUR NEXT CHAPTER"
+            data-sk="TROCHU LÁSKY PRE NAŠU ĎALŠIU KAPITOLU">A LITTLE LOVE FOR OUR NEXT CHAPTER</span>
+    </p>
+
+    <h2 class="script">
+      <span data-en="A Gift from the Heart ♡"
+            data-sk="Dar od srdca ♡">A Gift from the Heart ♡</span>
+    </h2>
+
+    <p data-en="Your presence at our wedding is already the greatest gift of all, and celebrating with you means the world to us. ❤️"
+       data-sk="Vaša prítomnosť na našej svadbe je už sama osebe tým najväčším darom a oslava s vami pre nás znamená celý svet. ❤️">Your presence at our wedding is already the greatest gift of all, and celebrating with you means the world to us. ❤️</p>
+
+    <p data-en="However, should you wish to shower us with your blessings, a monetary gift would be sincerely appreciated."
+       data-sk="Ak by ste nás však chceli obdarovať, veľmi si vážime aj finančný dar.">However, should you wish to shower us with your blessings, a monetary gift would be sincerely appreciated.</p>
+
+    <p data-en="Our love story now continues in Switzerland! 🇨🇭 As much as we’d love to bring every thoughtful gift home, our luggage allowance has other plans! 😂"
+       data-sk="Náš príbeh lásky teraz pokračuje vo Švajčiarsku! 🇨🇭 Aj keď by sme si radi priniesli domov každý milý darček, limit batožiny má iné plány! 😂">Our love story now continues in Switzerland! 🇨🇭 As much as we’d love to bring every thoughtful gift home, our luggage allowance has other plans! 😂</p>
+
+    <p data-en="We’d hate to choose between your lovely presents and our clothes for the flight home!"
+       data-sk="Neradi by sme si museli vyberať medzi vašimi krásnymi darčekmi a oblečením na cestu domov!">We’d hate to choose between your lovely presents and our clothes for the flight home!</p>
+
+    <p data-en="So, if you wish to bless us, a little love in monetary form would be much easier to bring across the miles. Every blessing, big or small, will be received with grateful hearts."
+       data-sk="Ak nás teda chcete obdarovať, finančný dar sa nám bude oveľa ľahšie prevážať na takú diaľku. Každý dar, veľký či malý, prijmeme s vďačným srdcom.">So, if you wish to bless us, a little love in monetary form would be much easier to bring across the miles. Every blessing, big or small, will be received with grateful hearts.</p>
+
+    <div class="gift-signoff">
+      <span data-en="With love and gratitude,"
+            data-sk="S láskou a vďačnosťou,">With love and gratitude,</span>
+      <br><span class="script">Aireen &amp; Matej ♡</span>
+    </div>
+
+    <p style="font:11px Cinzel,serif;letter-spacing:.15em;color:#925c24;">
+      <span data-en="CHOOSE YOUR PREFERRED WAY TO SEND A GIFT"
+            data-sk="VYBERTE SI SPÔSOB, AKO NÁM CHCETE POSLAŤ DAR">CHOOSE YOUR PREFERRED WAY TO SEND A GIFT</span>
+    </p>
+  </div>
+
+  <div class="gift-grid">
+    <article class="gift-card">
+      <h3>WISE</h3>
+      <p data-en="For our international friends and family."
+         data-sk="Pre našich priateľov a rodinu zo zahraničia.">For our international friends and family.</p>
+      <img class="gift-qr" src="Wise.JPG" alt="Wise payment QR code" loading="lazy">
+      <p data-en="Scan to send your blessing."
+         data-sk="Naskenujte kód a pošlite nám svoj dar.">Scan to send your blessing.</p>
+    </article>
+
+    <article class="gift-card">
+      <h3>GCash</h3>
+      <p data-en="For convenient gifts from the Philippines."
+         data-sk="Pre pohodlné posielanie darov z Filipín.">For convenient gifts from the Philippines.</p>
+      <img class="gift-qr" src="GCash.JPG" alt="GCash payment QR code" loading="lazy">
+      <p data-en="Scan with your GCash app."
+         data-sk="Naskenujte kód pomocou aplikácie GCash.">Scan with your GCash app.</p>
+    </article>
+
+    <article class="gift-card">
+      <h3>BDO</h3>
+      <p data-en="For guests who prefer a bank transfer."
+         data-sk="Pre hostí, ktorí uprednostňujú bankový prevod.">For guests who prefer a bank transfer.</p>
+      <img class="gift-qr" src="BDO.JPG" alt="BDO bank transfer QR code" loading="lazy">
+      <p data-en="Scan with a banking app."
+         data-sk="Naskenujte kód pomocou bankovej aplikácie.">Scan with a banking app.</p>
+    </article>
+  </div>
+</section>
 
 <div class="card" style="max-width:650px;margin:28px auto">
   
