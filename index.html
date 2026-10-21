@@ -807,6 +807,44 @@ body::before {
   opacity: 1 !important;
 }
 
+    
+/* ALIGN WOMEN'S AND MEN'S DRESS CODE CARDS */
+#dress .wrap {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+#dress .wrap > .kicker,
+#dress .wrap > h2,
+#dress .wrap > .dress-code-image,
+#dress .wrap > .intro,
+#dress .wrap > p.small {
+  grid-column: 1 / -1;
+}
+
+#dress .wrap > .card.dress {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  text-align: center;
+}
+
+#dress .wrap > .card.dress p {
+  text-align: center;
+}
+
+#dress .wrap > .card.dress .swatches {
+  justify-content: center;
+}
+
+@media (max-width: 650px) {
+  #dress .wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+
       /* Your existing CSS above */
 
   
