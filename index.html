@@ -1051,17 +1051,35 @@ body::before {
 /* END ACCOMMODATION CARD STYLING */
 
   
-/* BURGUNDY BACKGROUND FOR TRAVEL NOTES */
+
+/* TRAVEL NOTES — CENTERED BURGUNDY PANEL */
 #travel {
-  background: linear-gradient(145deg, #641b2b, #2b1019 85%) !important;
-  border-top: 1px solid #c7a45d;
-  border-bottom: 1px solid #c7a45d;
+  background: transparent !important;
+  border: none;
+  padding: 60px 22px !important;
+}
+
+#travel .wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 45px 35px;
+  border: 1px solid #c7a45d;
+  outline: 1px solid #c7a45d;
+  outline-offset: -7px;
+  background: linear-gradient(
+    145deg,
+    rgba(100, 27, 43, 0.97),
+    rgba(43, 16, 25, 0.97)
+  );
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.22);
 }
 
 #travel .note {
-  background: rgba(20, 8, 13, 0.35);
-  border-left-color: #d8b66b;
+  max-width: 650px;
+  margin: 24px auto 0;
   padding: 18px 22px;
+  background: rgba(20, 8, 13, 0.28);
+  border-left: 2px solid #d8b66b;
   color: #f8f0df;
 }
 
@@ -1069,6 +1087,17 @@ body::before {
 #travel .note strong {
   color: #f8f0df;
 }
+
+@media (max-width: 600px) {
+  #travel {
+    padding: 40px 14px !important;
+  }
+
+  #travel .wrap {
+    padding: 35px 22px;
+  }
+}
+
 
   </style>
 </head>
