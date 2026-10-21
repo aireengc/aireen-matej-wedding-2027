@@ -1099,6 +1099,25 @@ body::before {
 }
 
 
+  
+/* MAKE RSVP STAND OUT */
+.navlinks a.rsvp-nav {
+  background: #d8b66b;
+  color: #35131d !important;
+  border: 1px solid #f3d994;
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.navlinks a.rsvp-nav:hover {
+  background: #f3d994;
+  transform: translateY(-2px);
+}
+
   </style>
 </head>
 <body>
@@ -1136,7 +1155,9 @@ body::before {
   
 <a href="#accommodation"><span data-en="ACCOMMODATION" data-sk="UBYTOVANIE">ACCOMMODATION</span></a>
 
-<a href="#rsvp"><span data-en="RSVP" data-sk="POTVRDENIE ÚČASTI">RSVP</span></a>
+
+<a href="#rsvp" class="rsvp-nav"><span data-en="RSVP NOW" data-sk="POTVRĎTE ÚČASŤ">RSVP NOW</span></a>
+
 <div class="language-switch">
   <button type="button" onclick="setLanguage('en')">EN</button>
   <span>|</span>
